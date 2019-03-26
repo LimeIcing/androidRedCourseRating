@@ -26,21 +26,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == btnLogIn.getId()) {
-            Log.d(TAG, "Button press registered");
-
-            if (fieldUsername.getText().toString().isEmpty() ||
-                    fieldPassword.getText().toString().isEmpty()) {
-                Log.d(TAG, "Making toast");
-                Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT).show();
-            } else {
-                Intent intent = new Intent(this, CourseListActivity.class);
-                startActivity(intent);
-            }
+        Log.d(TAG, "Button press registered");
+        if (fieldUsername.getText().toString().isEmpty() ||
+                fieldPassword.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT)
+                    .show();
+        } else {
+            Intent intent = new Intent(this, CourseListActivity.class);
+            startActivity(intent);
         }
     }
 
     private void init() {
+        Log.d(TAG, "Initializing...");
+
         fieldUsername = findViewById(R.id.fieldUsername);
         fieldPassword = findViewById(R.id.fieldPassword);
         btnLogIn = findViewById(R.id.btnLogIn);
