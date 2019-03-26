@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RedCourseRating</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_username">Username</string>
+    <string name="welcome">Please log in with your KEA mail</string>
+    <string name="log_in">Log in</string>
+</resources>
