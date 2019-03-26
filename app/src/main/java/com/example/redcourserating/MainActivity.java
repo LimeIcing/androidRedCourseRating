@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(TAG, "onCreate() called");
 
         init();
     }
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if (fieldUsername.getText().toString().isEmpty() ||
                     fieldPassword.getText().toString().isEmpty()) {
-                Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT);
+                Log.d(TAG, "Making toast");
+                Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(this, CourseListActivity.class);
                 startActivity(intent);
@@ -42,5 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fieldUsername = findViewById(R.id.fieldUsername);
         fieldPassword = findViewById(R.id.fieldPassword);
         btnLogIn = findViewById(R.id.btnLogIn);
+        btnLogIn.setOnClickListener(this);
     }
 }
