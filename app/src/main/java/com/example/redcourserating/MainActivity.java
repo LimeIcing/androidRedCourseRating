@@ -29,8 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "Button press registered");
         if (fieldUsername.getText().toString().isEmpty() ||
                 fieldPassword.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please fill out both fields", Toast.LENGTH_SHORT)
-                    .show();
+            Toast.makeText(
+                    this, "Please fill out both fields", Toast.LENGTH_SHORT).show();
+        } else if (!fieldUsername.getText().toString().endsWith("@stud.kea.dk")) {
+            Toast.makeText(this, "Invalid username", Toast.LENGTH_SHORT).show();
         } else {
             Intent intent = new Intent(this, CourseListActivity.class);
             startActivity(intent);
