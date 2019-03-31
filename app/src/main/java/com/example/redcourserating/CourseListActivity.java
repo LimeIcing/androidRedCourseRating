@@ -43,7 +43,9 @@ public class CourseListActivity extends AppCompatActivity {
         recyclerCourseList.addItemDecoration(
                 new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerCourseList.setAdapter(courseAdapter);
+
         final Intent intent = new Intent(this, CourseDetailsActivity.class);
+        intent.putExtra("userID", getIntent().getExtras().getString("userID"));
 
         recyclerCourseList.addOnItemTouchListener(
                 new RecyclerTouchListener(
@@ -51,10 +53,9 @@ public class CourseListActivity extends AppCompatActivity {
                         new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                CourseModel selectedCourse = courses.get(position);
-                intent.putExtra("courseName", selectedCourse.getName());
-                intent.putExtra("courseID", selectedCourse.getCourseID());
-                intent.putExtra("teacherMail", selectedCourse.getTeacherMail());
+                Log.d(TAG, courses.get(position).getName() + " selected");
+
+                intent.putExtra("course", courses.get(position));
                 startActivity(intent);
             }
 

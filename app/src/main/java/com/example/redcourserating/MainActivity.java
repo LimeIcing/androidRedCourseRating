@@ -31,10 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fieldPassword.getText().toString().isEmpty()) {
             Toast.makeText(
                     this, "Please fill out both fields", Toast.LENGTH_SHORT).show();
-        } else if (!fieldUsername.getText().toString().endsWith("@stud.kea.dk")) {
+        } else if (!fieldUsername.getText().toString().endsWith("@stud.kea.dk") ||
+                fieldUsername.getText().toString().length() < 14) {
             Toast.makeText(this, "Invalid username", Toast.LENGTH_SHORT).show();
         } else {
+            String user = fieldUsername.getText().toString();
             Intent intent = new Intent(this, CourseListActivity.class);
+            intent.putExtra("userID", user.substring(0, user.indexOf("@")));
             startActivity(intent);
         }
     }

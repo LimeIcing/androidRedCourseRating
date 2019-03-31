@@ -1,8 +1,14 @@
 <resources>
-    <string name="app_name">RedCourseRating</string>
+    <string name="app_name" translatable="false">RedCourseRating</string>
     <string name="hint_password">Password</string>
     <string name="hint_username">Username</string>
     <string name="welcome">Please log in with your KEA mail</string>
     <string name="log_in">Log in</string>
     <string name="teacher">Teacher</string>
+    <string name="submit">Submit</string>
+    <string name="subject_relevance">Subject relevance</string>
+    <string name="teacher_s_overall_performance">Teacher\'s overall performance</string>
+    <string name="teacher_s_preparation">Teacher\'s preparation</string>
+    <string name="amount_of_feedback">Amount of feedback</string>
+    <string name="quality_of_examples">Quality of examples</string>
 </resources>

@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="Subject relevance" />
+                android:text="@string/subject_relevance" tools:targetApi="o" />
 
             <RatingBar
                 android:id="@+id/ratingRelevance"
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="Teacher's overall performance" />
+                android:text="@string/teacher_s_overall_performance" tools:targetApi="o" />
 
             <RatingBar
                 android:id="@+id/ratingTeacherPerf"
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="Teacher's preparation" />
+                android:text="@string/teacher_s_preparation" tools:targetApi="o" />
 
             <RatingBar
                 android:id="@+id/ratingTeacherPrep"
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="Amount of feedback" />
+                android:text="@string/amount_of_feedback" tools:targetApi="o" />
 
             <RatingBar
                 android:id="@+id/ratingFeedback"
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:text="Quality of examples" />
+                android:text="@string/quality_of_examples" tools:targetApi="o" />
 
             <RatingBar
                 android:id="@+id/ratingExamples"
@@ -123,7 +123,7 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit" />
+                android:text="@string/submit" />
         </LinearLayout>
     </ScrollView>
 
