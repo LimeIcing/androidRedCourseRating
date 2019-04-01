@@ -87,6 +87,8 @@ public class CourseDetailsActivity extends AppCompatActivity implements View.OnC
             avgRating += r * 4;
         }
 
+        Log.d(TAG, "Average rating: " + avgRating);
+
         if (avgRating == 100) {
             return "A+";
         } else if (avgRating > 90) {
@@ -134,7 +136,7 @@ public class CourseDetailsActivity extends AppCompatActivity implements View.OnC
         teacherMap.put("Jón Eikhólm", "jone");
         teacherMap.put("David Ema", "de");
         teacherMap.put("Cay Holmegaard Larsen", "cahl");
-        teacherMap.put("Faisal Fawsi Jarkass", "fafj");
+        teacherMap.put("Faisal Fawzi Jarkass", "fafj");
         teacherMap.put("Troels Helbo Jensen", "trhj");
         teacherMap.put("Kristoffer Michael Miklas", "krmm");
         teacherMap.put("Janus Pedersen", "janp");
